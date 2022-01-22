@@ -10,10 +10,17 @@ body {
 
 .nav-bar {
     text-align: center;
+    word-spacing: 0.5cm;
 }
 
 .nav-bar a {
     text-decoration: none;
+}
+
+.game-page {
+    color: rgba(47, 15, 226, 0.959);
+    font-size: x-large;
+    font-weight: bold;
 }
 
 .welcome {
@@ -25,6 +32,7 @@ body {
 
 a:hover {
     font-weight: bolder;
+    text-decoration-line: underline;
 }
 
 h3 {
