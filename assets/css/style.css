@@ -8,6 +8,25 @@ body {
     text-align: center;
 }
 
+.nav-bar {
+    text-align: center;
+}
+
+.nav-bar a {
+    text-decoration: none;
+}
+
+.welcome {
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgba(5, 77, 119, 0.959);
+    font-weight: bolder;
+}
+
 h3 {
     text-align: center;
     margin-bottom: -5%;
