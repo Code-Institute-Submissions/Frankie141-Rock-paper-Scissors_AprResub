@@ -19,6 +19,14 @@ h3 {
     font-weight: bolder;
 }
 
+.scores {
+    text-align: center;
+    font-weight: bolder;
+    font-size: larger;
+    word-spacing: 0.5em;
+    margin-top: 1.5rem;
+}
+
 /* Navigation bar styling */
 
 .nav-bar {
@@ -47,7 +55,6 @@ h3 {
     background: none;
     border: none;
     outline: none;
-    font-size: 20rem;
     cursor: pointer;
 }
 
@@ -55,7 +62,6 @@ h3 {
     background: none;
     border: none;
     outline: none;
-    font-size: 20rem;
     cursor: pointer;
 }
 
@@ -63,34 +69,7 @@ h3 {
     background: none;
     border: none;
     outline: none;
-    font-size: 20rem;
     cursor: pointer;
-}
-
-.scores {
-    text-align: center;
-    font-weight: bolder;
-    font-size: larger;
-    word-spacing: 0.5em;
-    margin-top: 1.5rem;
-}
-
-/* Instructions Page styling */
-
-h4 {
-    font-size: large;
-    font-weight: 900;
-    margin-left: 1rem;
-}
-
-p {
-    font-size: large;
-    margin: auto 1rem auto 1rem;
-}
-
-.instructions {
-    font-size: large;
-    margin: auto 1rem auto 1rem;
 }
 
 .home-page {
@@ -126,7 +105,23 @@ h3 {
     display: inline-block;
 }
 
+/* Instructions Page styling */
 
+h4 {
+    font-size: large;
+    font-weight: 900;
+    margin-left: 1rem;
+}
+
+p {
+    font-size: large;
+    margin: auto 1rem auto 1rem;
+}
+
+.instructions {
+    font-size: large;
+    margin: auto 1rem auto 1rem;
+}
 
 
 
