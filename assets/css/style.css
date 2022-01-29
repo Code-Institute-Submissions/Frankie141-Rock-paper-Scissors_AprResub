@@ -51,25 +51,28 @@ h3 {
 
 /* Game buttons styling */
 
-.rock {
+#rock {
     background: none;
     border: none;
     outline: none;
     cursor: pointer;
+    font-size: 3rem;
 }
 
-.paper {
+#paper {
     background: none;
     border: none;
     outline: none;
     cursor: pointer;
+    font-size: 3rem;
 }
 
-.scissors {
+#scissors {
     background: none;
     border: none;
     outline: none;
     cursor: pointer;
+    font-size: 3rem;
 }
 
 .home-page {
