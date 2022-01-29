@@ -57,6 +57,7 @@ h3 {
     outline: none;
     cursor: pointer;
     font-size: 3rem;
+    margin-right: 1.5em;
 }
 
 #paper {
@@ -65,6 +66,7 @@ h3 {
     outline: none;
     cursor: pointer;
     font-size: 3rem;
+    margin-right: 1.5em;
 }
 
 #scissors {
@@ -99,13 +101,18 @@ h3 {
     margin-top: 2rem;
 }
 
+.buttons {
+    display: inline-block;
+    transition: 100ms;
+}
+
+.buttons:hover {
+    transform: scale(1.2);
+}
+
 .scores {
     grid-area: scores;
     margin-top: 1rem;
-}
-
-.buttons {
-    display: inline-block;
 }
 
 /* Instructions Page styling */
