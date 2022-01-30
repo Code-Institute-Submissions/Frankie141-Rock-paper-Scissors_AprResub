@@ -190,6 +190,44 @@ p {
     #scissors {
         font-size: 2rem;
     }
+
+    /* Instructions Page styling */
+
+h4 {
+    font-family: 'Bebas Neue', Lato;
+    font-size: large;
+    font-weight: 900;
+    margin: 1.5rem auto 1rem;
+}
+
+p {
+    font-family: 'Bebas Neue', Lato;
+    font-size: medium;
+    margin: 1rem 1rem auto 1rem;
+}
+
+.instructions-two {
+    font-size: large;
+    font-family: 'Bebas Neue', Lato;
+}
+
+.instructions {
+    font-family: 'Bebas Neue', Lato;
+    font-size: medium;
+    margin: auto 1rem auto 1rem;
+}
+
+#welcome-page {
+    display: grid;
+    grid-template-areas: 
+    ". aim ."
+    ". p ."
+    ". instructions-two ."
+    ". instructions .";
+    grid-template-rows: 5rem 0.5fr 5rem 0.5fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
+}
+
 }
 
 /* For small screens min 481px max 786px wide and down */
@@ -209,6 +247,19 @@ p {
 
 #scissors {
     font-size: 2.5rem;
+}
+
+/* Instructions Page styling */
+
+#welcome-page {
+    display: grid;
+    grid-template-areas: 
+    ". aim ."
+    ". p ."
+    ". instructions-two ."
+    ". instructions .";
+    grid-template-rows: 6rem 10rem 6rem 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
 }
 
 }
