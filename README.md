@@ -89,9 +89,7 @@ The live link can be located here - [Rock, Paper, Scissors](https://frankie141.g
 
 * Content
 
-    * The code for the social media links was taken from the CI Love Running Project. 
-    * Credit for Youtube videos to ABCDeeLearning and One Little Project.
-    * Credit for flex code used to position Home page images from [W3Schools](https://www.w3schools.com/css/css3_flexbox.asp)
+    * 
 
 
 
