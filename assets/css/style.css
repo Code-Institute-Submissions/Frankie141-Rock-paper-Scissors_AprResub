@@ -85,7 +85,7 @@ h3 {
     ". h3 ."
     ". game-buttons ."
     ". scores .";
-    grid-template-rows: 2fr 3fr 2fr;
+    grid-template-rows: 3fr 4fr 3fr;
     grid-template-columns: 1fr 3fr 1fr;
     text-align: center;
 }
@@ -103,6 +103,11 @@ h3 {
     margin-top: 2rem;
 }
 
+.scores > p {
+    grid-area: scores;
+    margin-top: 1.5rem;
+}
+
 .buttons {
     display: inline-block;
     transition: 100ms;
@@ -110,11 +115,6 @@ h3 {
 
 .buttons:hover {
     transform: scale(1.2);
-}
-
-.scores {
-    grid-area: scores;
-    margin-top: 1rem;
 }
 
 /* Instructions Page styling */
@@ -160,8 +160,8 @@ p {
     }
 }
 
-/* For small screens min 480px max 786px wide and down */
-@media screen and (min-width: 480px) and (max-width: 786px) {
+/* For small screens min 481px max 786px wide and down */
+@media screen and (min-width: 481px) and (max-width: 786px) {
 
     /* Game buttons styling */
 
