@@ -91,7 +91,8 @@ The live link can be located here - [Rock, Paper, Scissors](https://frankie141.g
 * Content
 
     * The code used to assist with styling of HTML emojis was taken from - [Web Dev Simplified] https://www.youtube.com/watch?v=1yS-JV4fWqY&t=778s
-    * W3Schools used for inspiration of JavaScript code [JavaScript] - https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=257s 
+    * W3Schools used for inspiration of JavaScript code - [JavaScript] https://www.youtube.com/watch?v=RwFeg0cEZvQ&t=257s 
+    * Rock, paper, Scissors inspired from code from - [Ania Kubow] https://www.youtube.com/watch?v=RwFeg0cEZvQ
 
 
 
