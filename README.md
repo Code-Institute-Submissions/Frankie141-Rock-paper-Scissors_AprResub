@@ -60,7 +60,8 @@ img
 * Bugs 
 
     * When the computer selects its choice the message [objectHTMLspanelement] appears next to Computer choice in results. 
-    * Fix to be implented -tbc
+    * I discovered this was because I was using the wrong computer choice variables in the wrong order. 
+    * Rearranging the code has fixed my code error. 
 
 * Validator Testing 
 
