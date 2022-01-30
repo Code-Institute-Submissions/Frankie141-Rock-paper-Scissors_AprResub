@@ -45,15 +45,13 @@ This game site contains two menu options, Game and Instructions. This is simply 
 
 * Testing 
 
-    * I have tested this website in different browsers: Chrome, Edge and Firefox.
+    * I have tested this game in different browsers: Chrome, Edge and Firefox.
+
+    * The game results given are always correct. 
+
+    * The header, instructions, game buttons and results are all easy to read and understand. 
 
     * This project is responsiveness, colors contrast well and functions on all standard screen sizes using devtools device toolbar. 
-
-    * Navigation, header, about us, crafts and contact page are all readable and easy to understand. 
-
-    * The contact us form works and includes required fields, will only accept an email address in the email field and the submit button works. 
-
-    * The contact us form redirects the user to a thank you message when the contact form us submitted. 
 
 * Validator Testing 
 
