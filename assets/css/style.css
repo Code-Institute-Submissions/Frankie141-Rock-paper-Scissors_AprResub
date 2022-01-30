@@ -121,21 +121,53 @@ h3 {
 
 h4 {
     font-family: 'Bebas Neue', Lato;
-    font-size: large;
+    font-size: x-large;
     font-weight: 900;
-    margin-left: 1rem;
+    margin: 1.5rem auto 1rem;
 }
 
 p {
     font-family: 'Bebas Neue', Lato;
     font-size: large;
-    margin: auto 1rem auto 1rem;
+    margin: 1rem 1rem auto 1rem;
+}
+
+.instructions-two {
+    font-size: x-large;
+    font-family: 'Bebas Neue', Lato;
 }
 
 .instructions {
     font-family: 'Bebas Neue', Lato;
     font-size: large;
     margin: auto 1rem auto 1rem;
+}
+
+#welcome-page {
+    display: grid;
+    grid-template-areas: 
+    ". aim ."
+    ". p ."
+    ". instructions-two ."
+    ". instructions .";
+    grid-template-rows: 0.5fr 1.5fr 0.5fr 1.5fr;
+    grid-template-columns: 2fr 1.5fr 2fr;
+}
+
+.aim {
+    grid-area: aim;
+}
+
+p {
+    grid-area: p;
+}
+
+.instructions-two {
+    grid-area: instructions-two;
+}
+
+.instructions {
+    grid-area: instructions;
 }
 
 /* Media Queries */
