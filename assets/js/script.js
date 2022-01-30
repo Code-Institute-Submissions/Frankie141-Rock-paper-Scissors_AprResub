@@ -40,7 +40,7 @@ function generateComputersChoice() {
     if (randomChoiceNumber === 3) {
         computersChoice = 'paper';
     }
-    computersMove.innerHTML = computersMove;
+    computersMove.innerHTML = computersChoice;
 }
 
 /**
