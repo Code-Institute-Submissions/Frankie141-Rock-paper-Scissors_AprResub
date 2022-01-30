@@ -143,37 +143,41 @@ p {
 /* For small screens min 280px max 480px wide and down */
 @media screen and (min-width: 280px) and (max-width: 480px) {
 
+    /* Game buttons styling */
+
+    #rock {
+        font-size: 2rem;
+        margin-right: 0.6em;
+    }
+    
+    #paper {
+        font-size: 2rem;
+        margin-right: 0.6em;
+    }
+    
+    #scissors {
+        font-size: 2rem;
+    }
 }
 
 /* For small screens min 480px max 786px wide and down */
 @media screen and (min-width: 480px) and (max-width: 786px) {
-    
+
     /* Game buttons styling */
 
 #rock {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
     font-size: 2.5rem;
     margin-right: 0.8em;
 }
 
 #paper {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
     font-size: 2.5rem;
     margin-right: 0.8em;
 }
 
 #scissors {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
     font-size: 2.5rem;
 }
+
 }
   
