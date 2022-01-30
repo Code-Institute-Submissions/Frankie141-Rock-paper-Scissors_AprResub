@@ -22,6 +22,7 @@ This game site contains two menu options, Game and Instructions. This is simply 
     * The navigation bar underlines the link when hovered over. 
    
 
+
 * The Game Options 
 
     * The game includes three options to pick from using HTML emojis. 
@@ -30,10 +31,17 @@ This game site contains two menu options, Game and Instructions. This is simply 
 
 * The Game Results 
 
-    * When the user selects their choice the score field will show next to the "You" option. 
-    * JavaScript will pick a random choice for the Computer and display this choicen the "Computer" choice.  
-    * the Results box below these will show the messages "You lose, better luck next time!" or "You are the winner!". 
+    * When the user selects their choice the option picked will appear next to the "You" field. 
+    * JavaScript will pick a random choice for the computer and display this choice next to the "Computer" field.  
+    * The Results field below will show the messages "You lose, better luck next time!" or "You are the winner!". 
 
+
+
+* Features Left to Implement
+
+    * I would like to implement the lizard, spock options at a later stage. 
+    * I would like to make improvements to the styling of this game at a later stage.
+    * I would like to implement some more complex JavaScript at a later stage. 
 
 * Testing 
 
