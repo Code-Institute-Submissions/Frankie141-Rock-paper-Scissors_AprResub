@@ -10,8 +10,6 @@ const choiceOptions = document.querySelectorAll('button');
 let playerChoice;
 let computersChoice;
 let result;
-let playerScore = 0;
-let computerScore = 0;
 
 /**
  * Add event listener to all buttons
@@ -44,7 +42,7 @@ function generateComputersChoice() {
     if (randomChoiceNumber === 3) {
         computersChoice = 'paper';
     }
-    
+
     computersMove = computersChoice;
 }
 
@@ -54,42 +52,55 @@ function generateComputersChoice() {
  */
 
 function getResult() {
+    let playerScore = 0;
+    let computerScore = 0;
+    const computerScoreBoard = document.querySelector('computers-move');
+    const playerScoreBoard = document.querySelector('your-move');
+
     if (computersChoice === playerChoice) {
-        result = 'Its a draw';
+        result.textContent = 'Its a draw';
     }
 
     if (computersChoice === 'rock' && playerChoice === "paper") {
         result = 'Player, you are the winner!';
-
         playerScore++;
+        playerScoreBoard.textContent = playerScore;
+    }
+
+    else if (computersChoice === 'paper' && playerChoice === "paper") {
+        result.textContent = 'Its a draw';
     }
 
     if (computersChoice === 'rock' && playerChoice === "scissors") {
         result = 'Computer wins, better luck next time!';
-
         computerScore++;
+        computerScoreBoard.textContent = computerScore;
+    }
+
+    else if (computersChoice === 'scissors' && playerChoice === "scissors") {
+        result.textContent = 'Its a draw';
     }
 
     if (computersChoice === 'paper' && playerChoice === "scissors") {
         result = 'Computer wins, better luck next time!';
-
         computerScore++;
+        computerScoreBoard.textContent = computerScore;
     }
 
-    if (computersChoice === 'rock' && playerChoice === "rock") {
-        result = 'Its a draw';
+    else if (computersChoice === 'rock' && playerChoice === "rock") {
+        result.textContent = 'Its a draw';
     }
 
     if (computersChoice === 'scissors' && playerChoice === "rock") {
         result = 'Player, you are the winner!';
-
         playerScore++;
+        playerScoreBoard.textContent = playerScore;
     }
 
     if (computersChoice === 'scissors' && playerChoice === "paper") {
         result = 'Computer wins, better luck next time!';
-
         playerScore++;
+        playerScoreBoard.textContent = playerScore;
     }
 
     results.innerHTML = result;
