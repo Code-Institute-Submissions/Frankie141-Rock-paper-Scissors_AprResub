@@ -10,6 +10,8 @@ const choiceOptions = document.querySelectorAll('button');
 let playerChoice;
 let computersChoice;
 let result;
+let playerScore = 0;
+let computerScore = 0;
 
 /**
  * Add event listener to all buttons
@@ -52,24 +54,41 @@ function getResult() {
     if (computersChoice === playerChoice) {
         result = 'Its a draw';
     }
+
     if (computersChoice === 'rock' && playerChoice === "paper") {
         result = 'You are the winner!';
+
+        playerScore++;
     }
+
     if (computersChoice === 'rock' && playerChoice === "scissors") {
         result = 'You lost, better luck next time!';
+
+        computerScore++;
     }
+
     if (computersChoice === 'paper' && playerChoice === "scissors") {
-        result = 'You are the winnder!';
+        result = 'You are the winner!';
+
+        computerScore++;
     }
+
     if (computersChoice === 'rock' && playerChoice === "rock") {
-        result = 'You lost, better luck next time!';
+        result = 'Its a draw';
     }
+
     if (computersChoice === 'scissors' && playerChoice === "rock") {
-        result = 'You are the winnder!';
+        result = 'You are the winner!';
+
+        playerScore++;
     }
+
     if (computersChoice === 'scissors' && playerChoice === "paper") {
         result = 'You lost, better luck next time!';
+
+        playerScore++;
     }
+
     results.innerHTML = result;
 }
 
