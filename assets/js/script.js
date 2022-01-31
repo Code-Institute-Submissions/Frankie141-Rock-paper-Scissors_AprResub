@@ -3,8 +3,8 @@
  * and possible choices
  */
 
-const yourMove = document.getElementById('your-move');
-const computersMove = document.getElementById('computers-move');
+let yourMove = document.getElementById('your-move');
+let computersMove = document.getElementById('computers-move');
 const results = document.getElementById('results');
 const choiceOptions = document.querySelectorAll('button');
 let playerChoice;
@@ -15,11 +15,12 @@ let result;
  * Add event listener to all buttons
  */
 
-choiceOptions.forEach(choiceOptions => choiceOptions.addEventListener('click', (e) => {
-    playerChoice = e.target.id;
-    yourMove = playerChoice;
-    generateComputersChoice();
-    getResult();
+choiceOptions.forEach(choiceOptions => 
+    choiceOptions.addEventListener('click', (e) => {
+        playerChoice = e.target.id;
+        results.innerHTML = result;
+        generateComputersChoice();
+        getResult();
 }));
 
 /**
@@ -42,8 +43,6 @@ function generateComputersChoice() {
     if (randomChoiceNumber === 3) {
         computersChoice = 'paper';
     }
-
-    computersMove = computersChoice;
 }
 
 /**
@@ -52,58 +51,59 @@ function generateComputersChoice() {
  */
 
 function getResult() {
-    let playerScore = 0;
-    let computerScore = 0;
-    const computerScoreBoard = document.querySelector('computers-move');
-    const playerScoreBoard = document.querySelector('your-move');
+    let playerScore;
+    let computerScore;
+    let computerScoreBoard = document.querySelector('computers-move');
+    let playerScoreBoard = document.querySelector('your-move');
 
     if (computersChoice === playerChoice) {
-        result.textContent = 'Its a draw';
+        result = 'Its a draw';
     }
 
     if (computersChoice === 'rock' && playerChoice === "paper") {
         result = 'Player, you are the winner!';
         playerScore++;
-        playerScoreBoard.textContent = playerScore;
+        playerScoreBoard = playerScore;
     }
 
     else if (computersChoice === 'paper' && playerChoice === "paper") {
-        result.textContent = 'Its a draw';
+        result = 'Its a draw';
     }
 
     if (computersChoice === 'rock' && playerChoice === "scissors") {
         result = 'Computer wins, better luck next time!';
         computerScore++;
-        computerScoreBoard.textContent = computerScore;
+        computerScoreBoard = computerScore;
     }
 
     else if (computersChoice === 'scissors' && playerChoice === "scissors") {
-        result.textContent = 'Its a draw';
+        result = 'Its a draw';
     }
 
     if (computersChoice === 'paper' && playerChoice === "scissors") {
         result = 'Computer wins, better luck next time!';
         computerScore++;
-        computerScoreBoard.textContent = computerScore;
+        computerScoreBoard = computerScore;
     }
 
     else if (computersChoice === 'rock' && playerChoice === "rock") {
-        result.textContent = 'Its a draw';
+        result = 'Its a draw';
     }
 
     if (computersChoice === 'scissors' && playerChoice === "rock") {
         result = 'Player, you are the winner!';
         playerScore++;
-        playerScoreBoard.textContent = playerScore;
+        playerScoreBoard = playerScore;
     }
 
     if (computersChoice === 'scissors' && playerChoice === "paper") {
         result = 'Computer wins, better luck next time!';
         playerScore++;
-        playerScoreBoard.textContent = playerScore;
+        playerScoreBoard = playerScore;
     }
 
-    results.innerHTML = result;
+    yourMove = playerChoice;
+    computersMove = computersChoice;
 }
 
 
