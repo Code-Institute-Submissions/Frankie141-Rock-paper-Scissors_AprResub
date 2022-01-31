@@ -51,8 +51,9 @@ function generateComputersChoice() {
  */
 
 function getResult() {
-    let playerScore;
-    let computerScore;
+    let y = 1;
+    let playerScore = y++;
+    let computerScore = y++;
     let computerScoreBoard = document.querySelector('computers-move');
     let playerScoreBoard = document.querySelector('your-move');
 
@@ -62,8 +63,7 @@ function getResult() {
 
     if (computersChoice === 'rock' && playerChoice === "paper") {
         result = 'Player, you are the winner!';
-        playerScore++;
-        playerScoreBoard = playerScore;
+        document.getElementsByClassName("playerScore").innerHTML = playerScore;
     }
 
     else if (computersChoice === 'paper' && playerChoice === "paper") {
@@ -72,8 +72,7 @@ function getResult() {
 
     if (computersChoice === 'rock' && playerChoice === "scissors") {
         result = 'Computer wins, better luck next time!';
-        computerScore++;
-        computerScoreBoard = computerScore;
+        document.getElementsByClassName("computerScore").innerHTML = computerScore;
     }
 
     else if (computersChoice === 'scissors' && playerChoice === "scissors") {
@@ -82,8 +81,7 @@ function getResult() {
 
     if (computersChoice === 'paper' && playerChoice === "scissors") {
         result = 'Computer wins, better luck next time!';
-        computerScore++;
-        computerScoreBoard = computerScore;
+        document.getElementsByClassName("computerScore").innerHTML = computerScore;
     }
 
     else if (computersChoice === 'rock' && playerChoice === "rock") {
@@ -92,14 +90,12 @@ function getResult() {
 
     if (computersChoice === 'scissors' && playerChoice === "rock") {
         result = 'Player, you are the winner!';
-        playerScore++;
-        playerScoreBoard = playerScore;
+        document.getElementsByClassName("playerScore").innerHTML = playerScore;
     }
 
     if (computersChoice === 'scissors' && playerChoice === "paper") {
         result = 'Computer wins, better luck next time!';
-        playerScore++;
-        playerScoreBoard = playerScore;
+        document.getElementsByClassName("playerScore").innerHTML = playerScore;
     }
 
     yourMove = playerChoice;
