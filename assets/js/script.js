@@ -19,7 +19,7 @@ let computerScore = 0;
 
 choiceOptions.forEach(choiceOptions => choiceOptions.addEventListener('click', (e) => {
     playerChoice = e.target.id;
-    yourMove.innerHTML = playerChoice;
+    yourMove = playerChoice;
     generateComputersChoice();
     getResult();
 }));
@@ -36,13 +36,16 @@ function generateComputersChoice() {
     if (randomChoiceNumber === 1) {
         computersChoice = 'rock';
     }
+
     if (randomChoiceNumber === 2) {
         computersChoice = 'scissors';
     }
+
     if (randomChoiceNumber === 3) {
         computersChoice = 'paper';
     }
-    computersMove.innerHTML = computersChoice;
+    
+    computersMove = computersChoice;
 }
 
 /**
