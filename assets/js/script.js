@@ -51,11 +51,6 @@ function generateComputersChoice() {
  */
 
 function getResult() {
-    let y = 1;
-    let playerScore = y++;
-    let computerScore = y++;
-    let computerScoreBoard = document.querySelector('computers-move');
-    let playerScoreBoard = document.querySelector('your-move');
 
     if (computersChoice === playerChoice) {
         result = 'Its a draw';
@@ -63,7 +58,8 @@ function getResult() {
 
     if (computersChoice === 'rock' && playerChoice === "paper") {
         result = 'Player, you are the winner!';
-        document.getElementsByClassName("playerScore").innerHTML = playerScore;
+        let playerScore = parseInt(document.getElementsByClassName("player-score").innerText);
+        document.getElementsByClassName("player-score").innerText = ++playerScore;
     }
 
     else if (computersChoice === 'paper' && playerChoice === "paper") {
@@ -72,7 +68,8 @@ function getResult() {
 
     if (computersChoice === 'rock' && playerChoice === "scissors") {
         result = 'Computer wins, better luck next time!';
-        document.getElementsByClassName("computerScore").innerHTML = computerScore;
+        let computerScore = parseInt(document.getElementsByClassName("computer-score").innerText);
+        document.getElementsByClassName("computer-score").innerText = ++computerScore;
     }
 
     else if (computersChoice === 'scissors' && playerChoice === "scissors") {
@@ -81,7 +78,8 @@ function getResult() {
 
     if (computersChoice === 'paper' && playerChoice === "scissors") {
         result = 'Computer wins, better luck next time!';
-        document.getElementsByClassName("computerScore").innerHTML = computerScore;
+        let computerScore = parseInt(document.getElementsByClassName("computer-score").innerText);
+        document.getElementsByClassName("computer-score").innerText = ++computerScore;
     }
 
     else if (computersChoice === 'rock' && playerChoice === "rock") {
@@ -90,12 +88,14 @@ function getResult() {
 
     if (computersChoice === 'scissors' && playerChoice === "rock") {
         result = 'Player, you are the winner!';
-        document.getElementsByClassName("playerScore").innerHTML = playerScore;
+        let playerScore = parseInt(document.getElementsByClassName("player-score").innerText);
+        document.getElementsByClassName("player-score").innerText = ++playerScore;
     }
 
     if (computersChoice === 'scissors' && playerChoice === "paper") {
         result = 'Computer wins, better luck next time!';
-        document.getElementsByClassName("playerScore").innerHTML = playerScore;
+        let computerScore = parseInt(document.getElementsByClassName("computer-score").innerText);
+        document.getElementsByClassName("computer-score").innerText = ++computerScore;
     }
 
     yourMove = playerChoice;
