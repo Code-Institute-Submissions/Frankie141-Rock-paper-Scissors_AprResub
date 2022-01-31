@@ -56,19 +56,19 @@ function getResult() {
     }
 
     if (computersChoice === 'rock' && playerChoice === "paper") {
-        result = 'You are the winner!';
+        result = 'Player, you are the winner!';
 
         playerScore++;
     }
 
     if (computersChoice === 'rock' && playerChoice === "scissors") {
-        result = 'You lost, better luck next time!';
+        result = 'Computer wins, better luck next time!';
 
         computerScore++;
     }
 
     if (computersChoice === 'paper' && playerChoice === "scissors") {
-        result = 'You are the winner!';
+        result = 'Computer wins, better luck next time!';
 
         computerScore++;
     }
@@ -78,13 +78,13 @@ function getResult() {
     }
 
     if (computersChoice === 'scissors' && playerChoice === "rock") {
-        result = 'You are the winner!';
+        result = 'Player, you are the winner!';
 
         playerScore++;
     }
 
     if (computersChoice === 'scissors' && playerChoice === "paper") {
-        result = 'You lost, better luck next time!';
+        result = 'Computer wins, better luck next time!';
 
         playerScore++;
     }
