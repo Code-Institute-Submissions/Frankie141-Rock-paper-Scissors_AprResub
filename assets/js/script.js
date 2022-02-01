@@ -5,8 +5,8 @@
 
     let yourMove = document.getElementById('your-move');
     let computersMove = document.getElementById('computers-move');
+    let result = document.getElementById('.results');
     const choiceOptions = document.querySelectorAll('button');
-    const result = document.getElementsByClassName('.results');
     let computersChoice;
     let playerChoice;
 
@@ -18,7 +18,7 @@ choiceOptions.forEach(choiceOptions =>
     choiceOptions.addEventListener('click', (e) => {
         playerChoice = e.target.id;
         generateComputersChoice();
-        getResult(this.textContent, computersChoice, playerChoice);
+        getResult();
 }));
 
 /**
@@ -48,72 +48,59 @@ function generateComputersChoice() {
  * Game function for Results
  * Checks who the winner is
  */
-function getResult(playerChoice, computersChoice) {
+function getResult() {
 
     let pScore = 0;
     let cScore = 0;
 
 const updateScoreResults = () => {
 
-    const playerScore = document.querySelector('.player-score p');
-    const computerScore = document.querySelector('.computer-score p');
-    playerScore.textContent = pScore;
-    computerScore.textContent = cScore;
+    let playerScore = document.querySelector('.player-score p');
+    let computerScore = document.querySelector('.computer-score p');
+    playerScore = pScore;
+    computerScore = cScore;
+    yourMove = playerChoice;
+    computersMove = computersChoice;
 };
 
     if (computersChoice === playerChoice) {
-        result.textContent = 'Its a tie';
+        result = 'Its a tie';
     }
 
     if (computersChoice === 'rock' && playerChoice === "paper") {
-        result.textContent = 'Player, you are the winner!';
-        pScore++;
+        result = 'Player, you are the winner!';
+        ++pScore;
         updateScoreResults();
         return;
-    }
-
-    else if (computersChoice === 'paper' && playerChoice === "paper") {
-        result.textContent = 'Its a tie';
     }
 
     if (computersChoice === 'rock' && playerChoice === "scissors") {
-        result.textContent = 'Computer wins, better luck next time!';
-        cScore++;
+        result = 'Computer wins, better luck next time!';
+        ++cScore;
         updateScoreResults();
         return;
-    }
-
-    else if (computersChoice === 'scissors' && playerChoice === "scissors") {
-        result.textContent = 'Its a tie';
     }
 
     if (computersChoice === 'paper' && playerChoice === "scissors") {
-        result.textContent = 'Computer wins, better luck next time!';
-        cScore++;
+        result = 'Computer wins, better luck next time!';
+        ++cScore;
         updateScoreResults();
         return;
     }
 
-    else if (computersChoice === 'rock' && playerChoice === "rock") {
-        result.textContent = 'Its a tie';
-    }
-
     if (computersChoice === 'scissors' && playerChoice === "rock") {
-        result.textContent = 'Player, you are the winner!';
-        pScore++;
+        result = 'Player, you are the winner!';
+        ++pScore;
         updateScoreResults();
         return;
     }
 
     if (computersChoice === 'scissors' && playerChoice === "paper") {
-        result.textContent = 'Computer wins, better luck next time!';
-        cScore++;
+        result = 'Computer wins, better luck next time!';
+        ++cScore;
         updateScoreResults();
         return;
     }
-
-    yourMove = playerChoice;
-    computersMove = computersChoice;
 }
 
 
