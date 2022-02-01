@@ -3,8 +3,8 @@
  * and possible choices
  */  
 
-    let yourMove = document.getElementById('your-move');
-    let computersMove = document.getElementById('computers-move');
+    let yourMove = document.getElementById('#your-move');
+    let computersMove = document.getElementById('#computers-move');
     let result = document.getElementById('.results');
     const choiceOptions = document.querySelectorAll('button');
     let computersChoice;
@@ -16,7 +16,8 @@
 
 choiceOptions.forEach(choiceOptions => 
     choiceOptions.addEventListener('click', (e) => {
-        playerChoice = e.target.id;
+        playerChoice = e.target.Id;
+        console.log(playerChoice);
         generateComputersChoice();
         getResult();
 }));
