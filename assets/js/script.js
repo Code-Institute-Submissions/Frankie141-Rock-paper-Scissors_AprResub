@@ -6,6 +6,7 @@
     let yourMove = document.getElementById('your-move');
     let computersMove = document.getElementById('computers-move');
     const choiceOptions = document.querySelectorAll('button');
+    const result = document.getElementsByClassName('.results');
     let computersChoice;
     let playerChoice;
 
@@ -16,7 +17,6 @@
 choiceOptions.forEach(choiceOptions => 
     choiceOptions.addEventListener('click', (e) => {
         playerChoice = e.target.id;
-        results.innerHTML = result;
         generateComputersChoice();
         getResult(this.textContent, computersChoice, playerChoice);
 }));
@@ -57,7 +57,6 @@ const updateScoreResults = () => {
 
     const playerScore = document.querySelector('.player-score p');
     const computerScore = document.querySelector('.computer-score p');
-    const result = document.querySelector('.results');
     playerScore.textContent = pScore;
     computerScore.textContent = cScore;
 };
