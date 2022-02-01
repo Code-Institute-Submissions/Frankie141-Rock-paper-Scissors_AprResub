@@ -2,7 +2,6 @@
  * Declare constants for DOM Elements 
  * and possible choices
  */  
-
     let yourMove = document.getElementById('#your-move');
     let computersMove = document.getElementById('#computers-move');
     let result = document.getElementById('.results');
@@ -13,7 +12,6 @@
 /**
  * Add event listener to all buttons
  */
-
 choiceOptions.forEach(choiceOptions => 
     choiceOptions.addEventListener('click', (e) => {
         playerChoice = e.target.Id;
@@ -27,7 +25,6 @@ choiceOptions.forEach(choiceOptions =>
  * Accepts one parameter, which is the data-choice value
  * of the selected button
  */
-
 function generateComputersChoice() {
 
     const randomChoiceNumber = Math.floor(Math.random() * choiceOptions.length);
