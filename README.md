@@ -4,7 +4,7 @@ Rock Paper and Scissors is a JavaScript based game where the player and the comp
 
 This game site contains two menu options, Game and Instructions. This is simply a fun and quick game targeted at adults or children of all ages.  
 
-img
+<img src="assets/images/Responsiveness.PNG">
 
 ## Features
 
@@ -49,11 +49,11 @@ Testing
 
     * I have tested this game in different browsers: Chrome, Edge and Firefox.
 
-    * The game results given are always correct. 
-
     * The header, instructions, game buttons and results are all easy to read and understand. 
 
-    * This project is responsiveness, colors contrast well and functions on all standard screen sizes using devtools device toolbar. 
+    * This project is responsiveness, colors contrast well on all size screens. 
+
+    * Scoreboard function does not currently work.  
 
 Bugs 
 
