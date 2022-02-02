@@ -38,7 +38,7 @@ const game = () =>{
 
 /* Function to get results */
     function getResults() {
-        const result = document.getElementById('#results');
+        let result = document.getElementById('#results');
         const playerScore = document.getElementById('#player-score');
         const computerScore = document.getElementById('#computer-score');
 
