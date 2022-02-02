@@ -2,12 +2,15 @@
  * Declare constants for DOM Elements 
  * and possible choices
  */  
-    let yourMove = document.getElementById('#your-move');
-    let computersMove = document.getElementById('#computers-move');
-    let result = document.getElementById('.results');
-    const choiceOptions = document.querySelectorAll('button');
-    let computersChoice;
-    let playerChoice;
+
+let pScore = 0;
+let cScore = 0;
+const yourMove = document.getElementById('your-move');
+const computersMove = document.getElementById('computers-move');
+const result = document.getElementById('.results');
+const choiceOptions = document.querySelectorAll('button');
+let computersChoice;
+let playerChoice;
 
 /**
  * Add event listener to all buttons
@@ -47,9 +50,6 @@ function generateComputersChoice() {
  * Checks who the winner is
  */
 function getResult() {
-
-    let pScore = 0;
-    let cScore = 0;
 
 const updateScoreResults = () => {
 
