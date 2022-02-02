@@ -3,78 +3,83 @@
  * and possible choices
  * Setting scores 
  */  
-const game = () =>{
-    let pScore = 0;
-    let cScore = 0;
 
-    const playGame = () => {
-        const rockButton = document.getElementById('#rock');
-        const paperButton = document.getElementById('#paper');
-        const scissorsButton = document.getElementById('#scissors');
-        const computerChoice = [rockButton,paperButton,scissorsButton];
-        const playerChoice = ['rock', 'paper', 'scissors'];
+ const rockButton = document.getElementById('rock');
+ const paperButton = document.getElementById('paper');
+ const scissorsButton = document.getElementById('scissors');
+ let computerChoiceDisplay = [rockButton,paperButton,scissorsButton];
+ let playerChoiceDisplay = ['rock', 'paper', 'scissors'];
+ let choiceOptions = document.querySelectorAll('button');
+ let playerChoice
 
 /* Function to start game */        
-        playerChoice.forEach(choices => 
-        choices.addEventListener('click', (e) => {
-        choices = e.target.id;
-        getResults();
+    choiceOptions.forEach(choiceOptions => 
+        choiceOptions.addEventListener('click', (e) => {
+            playerChoice = e.target.id;
+            playerChoiceDisplay.innerHTML = playerChoice
+            generateComputerChoice();
+            getResults();
+}));    
 
-        const randomChoiceNumber = Math.floor(Math.random() * choiceOptions.length);
-    
-    if (randomChoiceNumber === 1) {
-        computerChoice = 'rock';
-    }
+function generateComputerChoice() {
 
-    if (randomChoiceNumber === 2) {
-        computerChoice = 'scissors';
-    }
+ const randomChoiceNumber = Math.floor(Math.random() * choiceOptions.length);
+ 
+ if (randomChoiceNumber === 1) {
+     computerChoice = 'rock';
+ }
 
-    if (randomChoiceNumber === 3) {
-        computerChoice = 'paper';
-    }
+ if (randomChoiceNumber === 2) {
+     computerChoice = 'scissors';
+ }
 
-},
+ if (randomChoiceNumber === 3) {
+     computerChoice = 'paper';
+ }
+
+}
 
 /* Function to get results */
-    function getResults() {
-        let result = document.getElementById('#results');
-        const playerScore = document.getElementById('#player-score');
-        const computerScore = document.getElementById('#computer-score');
+ function getResults() {
+    let pScore = 0;
+    let cScore = 0;
+    let result = document.getElementById('results');
+    let playerScore = document.getElementById('player-score');
+    let computerScore = document.getElementById('computer-score');
 
-    if (computerChoice === playerChoice) {
-        result.innerHTML = 'Its a tie';
-    }
-    else if (computerChoice === 'rock' && playerChoice === "paper") {
-        result.innerHTML = 'Player, you are the winner!';
-        pScore++;
-        playerScore.textContent = pScore;
-        
-    }
+    if (computerChoiceDisplay === playerChoiceDisplay) {
+        result = 'Its a tie';
+        }
 
-    if (computerChoice === 'rock' && playerChoice === "scissors") {
-        result = 'Computer wins, better luck next time!';
-        cScore++;
-        computerScore.textContent = cScore;
-    }
-
-    if (computerChoice === 'paper' && playerChoice === "scissors") {
-        result = 'Computer wins, better luck next time!';
-        cScore++;
-        computerScore.textContent = cScore;
-    }
-
-    if (computerChoice === 'scissors' && playerChoice === "rock") {
+    if (computerChoiceDisplay === 'rock' && playerChoiceDisplay === "paper") {
         result = 'Player, you are the winner!';
         pScore++;
-        playerScore.textContent = pScore;
-    }
+        playerScore = pScore;
+        }
 
-    if (computerChoice === 'scissors' && playerChoice === "paper") {
+    if (computerChoiceDisplay === 'rock' && playerChoiceDisplay === "scissors") {
         result = 'Computer wins, better luck next time!';
         cScore++;
-        computerScore.textContent = cScore;
-    }
-},
-};
+        computerScore = cScore;
+        }
+
+    if (computerChoiceDisplay === 'paper' && playerChoiceDisplay === "scissors") {
+        result = 'Computer wins, better luck next time!';
+        cScore++;
+        computerScore = cScore;
+        }
+
+    if (computerChoiceDisplay === 'scissors' && playerChoiceDisplay === "rock") {
+        result = 'Player, you are the winner!';
+        pScore++;
+        playerScore = pScore;
+        }   
+
+    if (computerChoiceDisplay === 'scissors' && playerChoiceDisplay === "paper") {
+        result = 'Computer wins, better luck next time!';
+        cScore++;
+        computerScore = cScore;
+        }
+ };
+
 
