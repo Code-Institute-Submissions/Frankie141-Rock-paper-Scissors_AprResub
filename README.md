@@ -4,6 +4,8 @@ Rock Paper and Scissors is a JavaScript based game where the player and the comp
 
 This game site contains two menu options, Game and Instructions. This is simply a fun and quick game targeted at adults or children of all ages.  
 
+img
+
 ## Features
 
 Header 
@@ -41,7 +43,7 @@ Features Left to Implement
 
     * I would like to implement the lizard, spock options at a later stage. 
     * I would like to make improvements to the styling of this game at a later stage.
-    * I would like to implement some more complex JavaScript at a later stage. 
+    * I would like to work on fixing the score board bug.
 
 Testing 
 
@@ -53,8 +55,6 @@ Testing
 
     * This project is responsiveness, colors contrast well and functions on all standard screen sizes using devtools device toolbar. 
 
-img
-
 Bugs 
 
     * When the computer selects its choice the message [objectHTMLspanelement] appears next to Computer choice in results. 
@@ -63,7 +63,7 @@ Bugs
 
 Unfixed Bugs 
 
-    * No unfixed bugs.    
+    * Scoreboard doesn't work despite endless tries at fixing this issue.    
 
 Validator Testing 
 
@@ -72,7 +72,7 @@ Validator Testing
     * CSS 
         * No errors returned when running code through the official (Jigsaw) validator.     
 
-img
+<img src="assets/images/lighthouse.PNG">
 
 Deployment    
 
