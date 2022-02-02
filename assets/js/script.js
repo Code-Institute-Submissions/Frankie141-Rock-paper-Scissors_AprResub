@@ -1,104 +1,77 @@
 /**
  * Declare constants for DOM Elements 
  * and possible choices
+ * Setting scores 
  */  
+const game = () =>{
+    let pScore = 0;
+    let cScore = 0;
 
-let pScore = 0;
-let cScore = 0;
-const yourMove = document.getElementById('your-move');
-const computersMove = document.getElementById('computers-move');
-const result = document.getElementById('.results');
-const choiceOptions = document.querySelectorAll('button');
-let computersChoice;
-let playerChoice;
+    const playGame = () => {
+        let computerChoice = [rockButton,paperButton,scissorsButton]
+        let playerChoice = ['rock', 'paper', 'scissors'];
+        const rockButton = document.getElementById('#rock');
+        const paperButton = document.getElementById('#paper');
+        const scissorsButton = document.getElementById('#scissors');
 
-/**
- * Add event listener to all buttons
- */
-choiceOptions.forEach(choiceOptions => 
-    choiceOptions.addEventListener('click', (e) => {
-        playerChoice = e.target.Id;
-        console.log(playerChoice);
-        generateComputersChoice();
-        getResult();
-}));
+        playerChoice.forEach(choices => 
+        choices.addEventListener('click', (e) => {
+        choices = e.target.id;
 
-/**
- * Game function for computer generated choice 
- * Accepts one parameter, which is the data-choice value
- * of the selected button
- */
-function generateComputersChoice() {
-
-    const randomChoiceNumber = Math.floor(Math.random() * choiceOptions.length);
+        const randomChoiceNumber = Math.floor(Math.random() * choiceOptions.length);
     
     if (randomChoiceNumber === 1) {
-        computersChoice = 'rock';
+        computerChoice = 'rock';
     }
 
     if (randomChoiceNumber === 2) {
-        computersChoice = 'scissors';
+        computerChoice = 'scissors';
     }
 
     if (randomChoiceNumber === 3) {
-        computersChoice = 'paper';
+        computerChoice = 'paper';
     }
-}
 
-/**
- * Game function for Results
- * Checks who the winner is
- */
-function getResult() {
-
-const updateScoreResults = () => {
-
-    let playerScore = document.querySelector('.player-score p');
-    let computerScore = document.querySelector('.computer-score p');
-    playerScore = pScore;
-    computerScore = cScore;
-    yourMove = playerChoice;
-    computersMove = computersChoice;
-};
-
-    if (computersChoice === playerChoice) {
+    if (computerChoice === playerChoice) {
         result = 'Its a tie';
     }
 
-    if (computersChoice === 'rock' && playerChoice === "paper") {
+    if (computerChoice === 'rock' && playerChoice === "paper") {
         result = 'Player, you are the winner!';
         ++pScore;
         updateScoreResults();
         return;
     }
 
-    if (computersChoice === 'rock' && playerChoice === "scissors") {
+    if (computerChoice === 'rock' && playerChoice === "scissors") {
         result = 'Computer wins, better luck next time!';
         ++cScore;
         updateScoreResults();
         return;
     }
 
-    if (computersChoice === 'paper' && playerChoice === "scissors") {
+    if (computerChoice === 'paper' && playerChoice === "scissors") {
         result = 'Computer wins, better luck next time!';
         ++cScore;
         updateScoreResults();
         return;
     }
 
-    if (computersChoice === 'scissors' && playerChoice === "rock") {
+    if (computerChoice === 'scissors' && playerChoice === "rock") {
         result = 'Player, you are the winner!';
         ++pScore;
         updateScoreResults();
         return;
     }
 
-    if (computersChoice === 'scissors' && playerChoice === "paper") {
+    if (computerChoice === 'scissors' && playerChoice === "paper") {
         result = 'Computer wins, better luck next time!';
         ++cScore;
         updateScoreResults();
         return;
     }
+});
+});
 }
 
 
