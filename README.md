@@ -63,7 +63,9 @@ Bugs
 
 Unfixed Bugs 
 
-    * Scoreboard doesn't work despite endless tries at fixing this issue.    
+    * Scoreboard doesn't work despite endless tries at fixing this issue. 
+    * CSS grid creating additional columns and rows and displaying elements where they shouldn't be. 
+    * I would like to work fixing both bugs however my time to complete the project has run out.  
 
 Validator Testing 
 
@@ -71,7 +73,9 @@ Validator Testing
         * No errors returned when running code through the official W3C validator. 
     * CSS 
         * No errors returned when running code through the official (Jigsaw) validator.     
-
+    * JavaScript 
+        * No errors returned when running code throigh the official JSHint validator. 
+         
 <img src="assets/images/lighthouse.PNG">
 
 Deployment    
