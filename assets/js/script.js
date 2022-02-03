@@ -37,7 +37,7 @@ function generateComputerChoice() {
 
 /* Function to get results */
  function getResults() {
-    const resultDisplay = document.querySelector('.results');
+    const resultDisplay = document.getElementsByClassName('results');
 
     if (computerChoiceDisplay === playerChoiceDisplay) {
         resultDisplay.innerHTML = 'Its a tie';
