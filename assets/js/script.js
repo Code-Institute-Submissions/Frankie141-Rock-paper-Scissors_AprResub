@@ -3,14 +3,15 @@
  * and possible choices
  * Setting scores 
  */  
- let computerChoiceDisplay = document.getElementById('computer-score');
- const playerChoiceDisplay = document.getElementById('player-score');
+ let computerChoiceDisplay = document.getElementById('computers-choice');
+ const playerChoiceDisplay = document.getElementById('players-choice');
  const choiceOptions = document.querySelectorAll('.game-button');
+ const resultDisplay = document.getElementsByClassName('results');
+ const playerScoreDiv = document.getElementById('player-score');
+ const computerScoreDiv = document.getElementById('computer-score');
  let scoreDiv = document.getElementById('score-box');
  let playerScore = 0;
- const playerScoreDiv = document.getElementById('player-score');
  let computerScore = 0;
- const computerScoreDiv = document.getElementById('computer-score');
  let playerChoice;
  let computerChoiceNumber;
  playerScoreDiv.innerHTML = playerScore;
@@ -19,13 +20,19 @@
 /* Function to start game */        
     choiceOptions.forEach(choiceOptions => 
         choiceOptions.addEventListener('click', (e) => {
+            console.log("click registered");
             playerChoice = e.target.id;
             playerChoiceDisplay.innerHTML = playerChoice;
+            console.log(playerChoice);
+            console.log(playerChoiceDisplay);
             generateComputerChoice();
-            getResults();
+            computerChoiceDisplay.innerHTML = computerChoiceNumber;
+            console.log("computerChoiceDisplay")
+            getResults("calling getResults function");
 })); 
 
 function generateComputerChoice() {
+    console.log("calling generateComputerChoice function");
     const randomChoiceNumber = Math.floor(Math.random() * choiceOptions.length);
 
     if (randomChoiceNumber === 1) {
@@ -38,13 +45,12 @@ function generateComputerChoice() {
 
     if (randomChoiceNumber === 3) {
         computerChoiceDisplay = 'paper';
-        } 
-        computerChoiceNumber.innerHTML = computerChoiceDisplay;   
+        }   
 }
 
 /* Function to get results */
  function getResults() {
-    const resultDisplay = document.getElementsByClassName('results');
+     console.log("calling getResults function");
 
     if (computerChoiceDisplay === playerChoiceDisplay){
         resultDisplay.innerHTML = 'Its a tie';
@@ -53,6 +59,9 @@ function generateComputerChoice() {
     else if (computerChoiceDisplay === 'rock')
         if  (playerChoiceDisplay === 'paper'){
         resultDisplay.innerHTML = 'Player, you are the winner!';
+        console.log("computerChoiceDisplay");
+        console.log("playerChoiceDisplay");
+        console.log("resultDisplay")
         }
 
     else if (computerChoiceDisplay === 'rock') 
