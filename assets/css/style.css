@@ -83,18 +83,13 @@ h3 {
     display: grid;
     grid-template-areas: 
     ". h3 ."
-    ". game-buttons ."
-    ". player-choice ."
-    ". computer-choice ."
-    ". scores .";
-    grid-template-rows: 3fr 4fr 4fr 4fr;
-    grid-template-columns: 1fr 4fr 1fr;
-    text-align: center;
+    ". game-buttons .";
+    grid-template-rows: 5rem 8rem;
+    grid-template-columns: 4fr;
 }
 
 .home-page {
     grid-column-start: 2;
-    grid-row-start: 2;
 }
 
 h3 {
@@ -107,16 +102,15 @@ h3 {
     text-align: center;
 }
 
-.player-choice > p {
-    grid-area: player-choice;
+.player-choice {
+    text-align: center;
 }
 
-.computer-choice > p {
-    grid-area: computer-choice;
+.computer-choice {
+    text-align: center;
 }
 
-.scores > p {
-    grid-area: scores;
+.scores-box > p {
     margin-top: 1.5rem;
 }
 
