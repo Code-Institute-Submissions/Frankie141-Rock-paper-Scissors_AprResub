@@ -6,7 +6,7 @@
  let computerChoiceDisplay = document.getElementById('computers-choice');
  const playerChoiceDisplay = document.getElementById('players-choice');
  const choiceOptions = document.querySelectorAll('.game-button');
- const resultDisplay = document.getElementsByClassName('results');
+ const winnerDisplay = document.getElementsByClassName('winner');
  const playerScoreDiv = document.getElementById('player-score');
  const computerScoreDiv = document.getElementById('computer-score');
  let scoreDiv = document.getElementById('score-box');
@@ -53,12 +53,12 @@ function generateComputerChoice() {
      console.log("calling getResults function");
 
     if (computerChoiceDisplay === playerChoiceDisplay){
-        resultDisplay.innerHTML = 'Its a tie';
+        winnerDisplay.innerHTML = 'Its a tie';
         }
 
     else if (computerChoiceDisplay === 'rock')
         if  (playerChoiceDisplay === 'paper'){
-        resultDisplay.innerHTML = 'Player, you are the winner!';
+        winnerDisplay.innerHTML = 'Player, you are the winner!';
         console.log("computerChoiceDisplay");
         console.log("playerChoiceDisplay");
         console.log("resultDisplay")
@@ -66,22 +66,22 @@ function generateComputerChoice() {
 
     else if (computerChoiceDisplay === 'rock') 
         if  (playerChoiceDisplay === 'scissors'){
-        resultDisplay.innerHTML = 'Computer wins, better luck next time!';
+        winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
         }
 
     else if (computerChoiceDisplay === 'paper')
         if  (playerChoiceDisplay == 'scissors'){
-        resultDisplay.innerHTML = 'Computer wins, better luck next time!';
+        winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
         }
 
     else if (computerChoiceDisplay === 'scissors')
         if  (playerChoiceDisplay === 'rock'){
-        resultDisplay.innerHTML = 'Player, you are the winner!';
+        winnerDisplay.innerHTML = 'Player, you are the winner!';
         }   
 
     else if (computerChoiceDisplay === 'scissors') 
         if  (playerChoiceDisplay === 'paper'){
-        resultDisplay.innerHTML = 'Computer wins, better luck next time!';
+        winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
         }
  }
 
