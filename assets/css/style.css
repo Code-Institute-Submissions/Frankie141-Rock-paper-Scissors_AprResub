@@ -84,8 +84,20 @@ h3 {
     grid-template-areas: 
     ". h3 ."
     ". game-buttons .";
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: repeat(1, 2fr);
+    grid-template-rows: repeat(2, 2fr);
+}
+
+.home-page {
+    grid-column-start: 2;
+}
+
+h3 {
+    grid-area: h3;
+}
+
+.game-buttons {
+    grid-area: game-buttons;
 }
 
 /* Instructions Page styling */
