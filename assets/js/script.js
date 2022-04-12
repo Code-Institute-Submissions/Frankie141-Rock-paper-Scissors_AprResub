@@ -34,6 +34,7 @@
             computerChoiceDisplay.innerHTML = computerChoiceNumber;
             console.log("computerChoiceDisplay")
             getResults("calling getResults function");
+            scoreBoard();
 })); 
 
 function generateComputerChoice() {
@@ -88,6 +89,11 @@ function generateComputerChoice() {
         if  (playerChoiceDisplay === 'paper'){
         winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
         }
+
+ /* Function for Scoreboard */
+function scoreBoard() {
+
+}       
  }
 
 
