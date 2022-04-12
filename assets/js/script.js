@@ -13,6 +13,7 @@
  let playerScore = 0;
  let computerScore = 0;
  let playerChoice;
+ let computerChoice;
  let computerChoiceNumber;
  playerScoreDiv.innerHTML = playerScore;
  computerScoreDiv.innerHTML = computerScore;
@@ -25,6 +26,10 @@
             playerChoiceDisplay.innerHTML = playerChoice;
             console.log(playerChoice);
             console.log(playerChoiceDisplay);
+            computerChoice = e.target.id;
+            computerChoiceDisplay.innerHTML = computerChoice;
+            console.log(computerChoice);
+            console.log(computerChoiceDisplay);
             generateComputerChoice();
             computerChoiceDisplay.innerHTML = computerChoiceNumber;
             console.log("computerChoiceDisplay")
