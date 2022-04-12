@@ -84,43 +84,8 @@ h3 {
     grid-template-areas: 
     ". h3 ."
     ". game-buttons .";
-    grid-template-rows: 5rem 8rem;
-    grid-template-columns: 4fr;
-}
-
-.home-page {
-    grid-column-start: 2;
-}
-
-h3 {
-    grid-area: h3;
-}
-
-.game-buttons {
-    grid-area: game-buttons;
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.player-choice {
-    text-align: center;
-}
-
-.computer-choice {
-    text-align: center;
-}
-
-.scores-box > p {
-    margin-top: 1.5rem;
-}
-
-.buttons {
-    display: inline-block;
-    transition: 100ms;
-}
-
-.buttons:hover {
-    transform: scale(1.2);
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
 }
 
 /* Instructions Page styling */
