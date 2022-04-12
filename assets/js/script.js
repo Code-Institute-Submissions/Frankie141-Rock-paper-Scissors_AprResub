@@ -37,6 +37,7 @@
             scoreBoard();
 })); 
 
+/* Function to generate computers choice*/
 function generateComputerChoice() {
     console.log("calling generateComputerChoice function");
     const randomChoiceNumber = Math.floor(Math.random() * choiceOptions.length);
@@ -44,7 +45,7 @@ function generateComputerChoice() {
     if (randomChoiceNumber === 1) {
         computerChoiceDisplay = 'rock';
         }
-
+    
     if (randomChoiceNumber === 2) {
         computerChoiceDisplay = 'scissors';
         }
@@ -52,6 +53,8 @@ function generateComputerChoice() {
     if (randomChoiceNumber === 3) {
         computerChoiceDisplay = 'paper';
         }   
+        
+    return computerChoice;    
 }
 
 /* Function to get results */
@@ -67,27 +70,39 @@ function generateComputerChoice() {
         winnerDisplay.innerHTML = 'Player, you are the winner!';
         console.log("computerChoiceDisplay");
         console.log("playerChoiceDisplay");
-        console.log("resultDisplay")
+        console.log("winnerDisplay")
         }
 
     else if (computerChoiceDisplay === 'rock') 
         if  (playerChoiceDisplay === 'scissors'){
         winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
+        console.log("computerChoiceDisplay");
+        console.log("playerChoiceDisplay");
+        console.log("winnerDisplay")
         }
 
     else if (computerChoiceDisplay === 'paper')
         if  (playerChoiceDisplay == 'scissors'){
         winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
+        console.log("computerChoiceDisplay");
+        console.log("playerChoiceDisplay");
+        console.log("winnerDisplay")
         }
 
     else if (computerChoiceDisplay === 'scissors')
         if  (playerChoiceDisplay === 'rock'){
         winnerDisplay.innerHTML = 'Player, you are the winner!';
+        console.log("computerChoiceDisplay");
+        console.log("playerChoiceDisplay");
+        console.log("winnerDisplay")
         }   
 
     else if (computerChoiceDisplay === 'scissors') 
         if  (playerChoiceDisplay === 'paper'){
         winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
+        console.log("computerChoiceDisplay");
+        console.log("playerChoiceDisplay");
+        console.log("winnerDisplay")
         }
 
  /* Function for Scoreboard */
