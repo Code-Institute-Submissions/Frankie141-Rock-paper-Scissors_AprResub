@@ -34,25 +34,27 @@
     <div class="home-page">
     <h3>Make your Move</h3>
 
-    <div class="game-buttons">
+    <div class="game-buttons" id="container">
         <div class="buttons">
-            <button class="game-button" id="rock">&#9994;</button>
+            <button class="game-button" class="inline-block" id="rock" id="button1">&#9994;</button>
         </div>
         <div class="buttons">
-            <button class="game-button" id="paper">&#128195;</button>
+            <button class="game-button" class="inline-block" id="paper" id="button2">&#128195;</button>
         </div>
         <div class="buttons">
-            <button class="game-button" id="scissors">&#9986;</button>
+            <button class="game-button" class="inline-block" id="scissors" id="button3">&#9986;</button>
         </div>
     </div>
 
     <!-- Option selected by player and computer -->
 
+    <div id="choices">
     <div id="players-choice"></div>
     <p class="player-choice">Players Choice: <span></span></p>
     </div>
     <div id="computers-choice">
     <p class="computer-choice">Computers Choice: <span></span></p>
+    </div>
     </div>
 
     <!-- Scores and Results -->
