@@ -79,36 +79,29 @@ h3 {
     font-size: 3rem;
 }
 
-.home-page {
-    display: grid;
-    grid-template-areas: 
-    ". h3 ."
-    ". game-buttons ."
-    ". players-choice ."
-    ". computers-choice .";
-    grid-template-columns: auto auto auto;
-    grid-template-rows: repeat(2, 8rem 8rem);
-}
-
-.home-page {
-    grid-column-start: 2;
-}
-
 h3 {
-    grid-area: h3;
-    
+    text-align: center;
 }
 
-.game-buttons {
-    grid-area: game-buttons;
+#rock {
+    text-align: center;
+    margin-top: 8%;
+    margin-left: 35%;
+    display: inline-block;
 }
 
-#players-choice {
-    grid-area: player-choice;
+#paper {
+    text-align: center;
+    margin-top: 8%;
+    margin-left: 45%;
+    display: inline-block;
 }
 
-#computers-choice {
-    grid-area: computer-choice;
+#scissors {
+    text-align: center;
+    margin-top: 8%;
+    margin-left: 58%;
+    display: inline-block;
 }
 
 /* Instructions Page styling */
