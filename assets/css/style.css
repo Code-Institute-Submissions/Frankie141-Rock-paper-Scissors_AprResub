@@ -83,25 +83,40 @@ h3 {
     text-align: center;
 }
 
+#container div {
+    display: inline-block;
+    width: 18rem;
+    text-align: center;
+}
+
 #rock {
     text-align: center;
-    margin-top: 8%;
-    margin-left: 35%;
-    display: inline-block;
+    margin: 35% 45% 0 48%;
+    padding-left: 40%;
 }
 
 #paper {
     text-align: center;
-    margin-top: 8%;
-    margin-left: 45%;
-    display: inline-block;
+    margin: 35% 60% 0 48%;
 }
 
 #scissors {
     text-align: center;
-    margin-top: 8%;
-    margin-left: 58%;
+    margin: 35% 65% 0 48%;
+}
+
+.player-choice {
+    text-align: center;
+}
+
+#computers-choice {
+    text-align: center;
+}
+
+#choices div {
     display: inline-block;
+    text-align: center;
+    width: 15rem;
 }
 
 /* Instructions Page styling */
