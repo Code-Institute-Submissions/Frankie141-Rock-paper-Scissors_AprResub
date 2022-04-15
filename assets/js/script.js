@@ -61,48 +61,51 @@ function generateComputerChoice() {
  function getResults() {
      console.log("calling getResults function");
 
-    if (computerChoiceDisplay === playerChoiceDisplay){
-        winnerDisplay.innerHTML = 'Its a tie';
+     document.getElementById("playerChoice").innerHTML = playerChoiceDisplay
+     document.getElementById("computerChoice").innerHTML = computerChoiceDisplay
+
+        if (computerChoiceDisplay === playerChoiceDisplay){
+            document.getElementsByClassName("winner").innerHTML = 'Its a tie';
         }
 
-    else if (computerChoiceDisplay === 'rock')
-        if  (playerChoiceDisplay === 'paper'){
-        winnerDisplay.innerHTML = 'Player, you are the winner!';
-        console.log("computerChoiceDisplay");
-        console.log("playerChoiceDisplay");
-        console.log("winnerDisplay")
+        else if (computerChoiceDisplay === 'rock')
+            if  (playerChoiceDisplay === 'paper'){
+                winnerDisplay.innerHTML = 'Player, you are the winner!';
+                console.log("computerChoiceDisplay");
+                console.log("playerChoiceDisplay");
+                console.log("winnerDisplay")
         }
 
-    else if (computerChoiceDisplay === 'rock') 
-        if  (playerChoiceDisplay === 'scissors'){
-        winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
-        console.log("computerChoiceDisplay");
-        console.log("playerChoiceDisplay");
-        console.log("winnerDisplay")
+        else if (computerChoiceDisplay === 'rock') 
+            if  (playerChoiceDisplay === 'scissors'){
+                winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
+                console.log("computerChoiceDisplay");
+                console.log("playerChoiceDisplay");
+                console.log("winnerDisplay")
         }
 
-    else if (computerChoiceDisplay === 'paper')
-        if  (playerChoiceDisplay == 'scissors'){
-        winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
-        console.log("computerChoiceDisplay");
-        console.log("playerChoiceDisplay");
-        console.log("winnerDisplay")
+        else if (computerChoiceDisplay === 'paper')
+            if  (playerChoiceDisplay == 'scissors'){
+                winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
+                console.log("computerChoiceDisplay");
+                console.log("playerChoiceDisplay");
+                console.log("winnerDisplay")
         }
 
-    else if (computerChoiceDisplay === 'scissors')
-        if  (playerChoiceDisplay === 'rock'){
-        winnerDisplay.innerHTML = 'Player, you are the winner!';
-        console.log("computerChoiceDisplay");
-        console.log("playerChoiceDisplay");
-        console.log("winnerDisplay")
+        else if (computerChoiceDisplay === 'scissors')
+            if  (playerChoiceDisplay === 'rock'){
+                winnerDisplay.innerHTML = 'Player, you are the winner!';
+                console.log("computerChoiceDisplay");
+                console.log("playerChoiceDisplay");
+                console.log("winnerDisplay")
         }   
 
-    else if (computerChoiceDisplay === 'scissors') 
-        if  (playerChoiceDisplay === 'paper'){
-        winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
-        console.log("computerChoiceDisplay");
-        console.log("playerChoiceDisplay");
-        console.log("winnerDisplay")
+        else if (computerChoiceDisplay === 'scissors') 
+            if  (playerChoiceDisplay === 'paper'){
+                winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
+                console.log("computerChoiceDisplay");
+                console.log("playerChoiceDisplay");
+                console.log("winnerDisplay")
         }
 
  /* Function for Scoreboard */
