@@ -21,6 +21,14 @@ h3 {
     font-weight: bolder;
 }
 
+#choices {
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    color: black;
+    font-style: italic;
+}
+
 .score-box {
     text-align: center;
     font-weight: bolder;
