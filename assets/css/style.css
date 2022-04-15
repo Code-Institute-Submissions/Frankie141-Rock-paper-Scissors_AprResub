@@ -73,6 +73,10 @@ h3 {
     margin-left: 1.5em;
 }
 
+.game-button:hover {
+    transform: scale(1.3);
+}
+
 h3 {
     text-align: center;
 }
