@@ -68,7 +68,6 @@ h3 {
     outline: none;
     cursor: pointer;
     font-size: 3rem;
-    text-align: center;
 }
 
 #scissors {
@@ -83,26 +82,13 @@ h3 {
     text-align: center;
 }
 
-#container div {
-    display: inline-block;
-    width: 18rem;
-    text-align: center;
-}
-
-#rock {
-    text-align: center;
-    margin: 35% 45% 0 48%;
-    padding-left: 40%;
-}
-
-#paper {
-    text-align: center;
-    margin: 35% 60% 0 48%;
-}
-
-#scissors {
-    text-align: center;
-    margin: 35% 65% 0 48%;
+.game-buttons {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .player-choice {
@@ -179,29 +165,20 @@ p {
 
     /* Game buttons styling */
 
-    #choices div {
+    .game.buttons {
         display: inline-block;
-        text-align: center;
-        width: 150px;
     }
 
     #rock {
-        font-size: 2.8rem;
-        margin-left: 0.4em;
-        padding-left: 10%;
+        font-size: 2rem;
     }
-    
+
     #paper {
-        font-size: 2.8rem;
-        margin: 0 1em 0 20px;
-        margin-right: 0.8em;
-        padding-inline: 18%;
-        margin-inline: 50%;
+        font-size: 2rem;
     }
     
     #scissors {
-        font-size: 2.8rem;
-        margin-right: 0.4em;
+        font-size: 2rem;
     }
 
     /* Instructions Page styling */
