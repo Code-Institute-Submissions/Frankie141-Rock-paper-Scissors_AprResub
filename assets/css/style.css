@@ -59,7 +59,7 @@ h3 {
     outline: none;
     cursor: pointer;
     font-size: 3rem;
-    margin-right: 1.5em;
+    margin-left: 1.5em;
 }
 
 #paper {
@@ -68,7 +68,7 @@ h3 {
     outline: none;
     cursor: pointer;
     font-size: 3rem;
-    margin-right: 1.5em;
+    text-align: center;
 }
 
 #scissors {
@@ -179,18 +179,29 @@ p {
 
     /* Game buttons styling */
 
+    #choices div {
+        display: inline-block;
+        text-align: center;
+        width: 150px;
+    }
+
     #rock {
-        font-size: 2rem;
-        margin-right: 0.6em;
+        font-size: 2.8rem;
+        margin-left: 0.4em;
+        padding-left: 10%;
     }
     
     #paper {
-        font-size: 2rem;
-        margin-right: 0.6em;
+        font-size: 2.8rem;
+        margin: 0 1em 0 20px;
+        margin-right: 0.8em;
+        padding-inline: 18%;
+        margin-inline: 50%;
     }
     
     #scissors {
-        font-size: 2rem;
+        font-size: 2.8rem;
+        margin-right: 0.4em;
     }
 
     /* Instructions Page styling */
