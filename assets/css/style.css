@@ -103,6 +103,12 @@ h3 {
     width: 15rem;
 }
 
+.clear-button {
+    text-align: center;
+    margin-top: 2%;
+    border: none;
+}
+
 /* Instructions Page styling */
 
 h4 {
