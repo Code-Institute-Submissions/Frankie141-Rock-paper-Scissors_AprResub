@@ -68,6 +68,7 @@ h3 {
     cursor: pointer;
     font-size: 4rem;
     letter-spacing: 1cm;
+    transition: 100ms;
 }
 
 .game-buttons {
