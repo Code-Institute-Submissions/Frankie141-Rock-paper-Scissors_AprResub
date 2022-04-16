@@ -6,10 +6,8 @@
 let computerChoiceDisplay = document.getElementById('computers-choice');
 const playerChoiceDisplay = document.getElementById('players-choice');
 const choiceOptions = document.querySelectorAll('.game-button');
-const winnerDisplay = document.getElementsByClassName('winner');
 const playerScore = document.getElementsByClassName('player-score');
 const computerScore = document.getElementsByClassName('computer-score');
-let scoreDiv = document.getElementById('score-box');
 let playerChoice;
 let computerChoice;
 let computerChoiceNumber;
@@ -18,15 +16,15 @@ let computerChoiceNumber;
 /* Function to start game */        
     choiceOptions.forEach(choiceOptions => 
         choiceOptions.addEventListener('click', (e) => {
-    document.getElementById("clear").addEventListener("click", clear);        
-            console.log("click registered");
-            playerChoice = e.target.id;
-            playerChoiceDisplay.innerHTML= playerChoice;
-            computerChoice = e.target.id;
-            computerChoiceDisplay.innerHTML = computerChoice;
-            generateComputerChoice();
-            computerChoiceDisplay.innerHTML = computerChoiceNumber;
-            getResults("calling getResults function");
+        document.getElementById("clear").addEventListener("click", clear);        
+        console.log("click registered");
+        playerChoice = e.target.id;
+        playerChoiceDisplay.innerHTML= playerChoice;
+        computerChoice = e.target.id;
+        computerChoiceDisplay.innerHTML = computerChoice;
+        generateComputerChoice();
+        computerChoiceDisplay.innerHTML = computerChoiceNumber;
+        getResults("calling getResults function");
 })); 
 
 /* Function to generate computers choice*/
