@@ -3,24 +3,22 @@
  * and possible choices
  * Setting scores 
  */  
- let computerChoiceDisplay = document.getElementById('computers-choice');
- const playerChoiceDisplay = document.getElementById('players-choice');
- const choiceOptions = document.querySelectorAll('.game-button');
- const winnerDisplay = document.getElementsByClassName('winner');
- const playerScoreDiv = document.getElementById('player-score');
- const computerScoreDiv = document.getElementById('computer-score');
- let scoreDiv = document.getElementById('score-box');
- let playerScore = 0;
- let computerScore = 0;
- let playerChoice;
- let computerChoice;
- let computerChoiceNumber;
- playerScoreDiv.innerHTML = playerScore;
- computerScoreDiv.innerHTML = computerScore;
+let computerChoiceDisplay = document.getElementById('computers-choice');
+const playerChoiceDisplay = document.getElementById('players-choice');
+const choiceOptions = document.querySelectorAll('.game-button');
+const winnerDisplay = document.getElementsByClassName('winner');
+const playerScore = document.getElementsByClassName('player-score');
+const computerScore = document.getElementsByClassName('computer-score');
+let scoreDiv = document.getElementById('score-box');
+let playerChoice;
+let computerChoice;
+let computerChoiceNumber;
+
 
 /* Function to start game */        
     choiceOptions.forEach(choiceOptions => 
         choiceOptions.addEventListener('click', (e) => {
+    document.getElementById("clear").addEventListener("click", clear);        
             console.log("click registered");
             playerChoice = e.target.id;
             playerChoiceDisplay.innerHTML = playerChoice;
@@ -65,53 +63,37 @@ function generateComputerChoice() {
      document.getElementById("computerChoice").innerHTML = computerChoiceDisplay
 
         if (computerChoiceDisplay === playerChoiceDisplay){
-            document.getElementsByClassName("winner").innerHTML = 'Its a tie';
+            document.getElementsByClassName("winner").innerHTML = 'Its a tie'
         }
 
-        else if (computerChoiceDisplay === 'rock')
+        if (computerChoiceDisplay === 'rock')
             if  (playerChoiceDisplay === 'paper'){
-                winnerDisplay.innerHTML = 'Player, you are the winner!';
-                console.log("computerChoiceDisplay");
-                console.log("playerChoiceDisplay");
-                console.log("winnerDisplay")
-        }
+                document.getElementsByClassName("winner").innerHTML = 'Player, you are the winner!';
+                playerScore.innerHTML = parseInt(playerScore.innerHTML)+1;   
+            }
+            else {
+            if (computerChoiceDisplay === 'scissors') {
+                document.getElementsByClassName('winner').innerHTML = 'Computer wins, better luck next time!';
+                computerScore.innerHTML = parseInt(computerScore.innerHTML)+1;
+                }    
+            }
 
-        else if (computerChoiceDisplay === 'rock') 
+        if (computerChoiceDisplay === 'paper') 
             if  (playerChoiceDisplay === 'scissors'){
-                winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
-                console.log("computerChoiceDisplay");
-                console.log("playerChoiceDisplay");
-                console.log("winnerDisplay")
-        }
+                document.getElementsByClassName('winner').innerHTML = 'Player, you are the winner!';
+                playerScore.innerHTML = parseInt(playerScore.innerHTML)+1;
+            } 
+            else {
+            if (computerChoiceDisplay === 'rock')
+                document.getElementsByClassName('winner').innerHTML = 'Computer wins, better luck next time!';
+                computerScore.innerHTML = parseInt(computerScore.innerHTML)+1;
+                }
+            }
 
-        else if (computerChoiceDisplay === 'paper')
-            if  (playerChoiceDisplay == 'scissors'){
-                winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
-                console.log("computerChoiceDisplay");
-                console.log("playerChoiceDisplay");
-                console.log("winnerDisplay")
-        }
-
-        else if (computerChoiceDisplay === 'scissors')
+        if (computerChoiceDisplay === 'scissors')
             if  (playerChoiceDisplay === 'rock'){
-                winnerDisplay.innerHTML = 'Player, you are the winner!';
-                console.log("computerChoiceDisplay");
-                console.log("playerChoiceDisplay");
-                console.log("winnerDisplay")
+                document.getElementsByClassName('winner').innerHTML = 'Player, you are the winner!';
+                playerScore.innerHTML = parseInt(playerScore.innerHTML)+1;   
         }   
-
-        else if (computerChoiceDisplay === 'scissors') 
-            if  (playerChoiceDisplay === 'paper'){
-                winnerDisplay.innerHTML = 'Computer wins, better luck next time!';
-                console.log("computerChoiceDisplay");
-                console.log("playerChoiceDisplay");
-                console.log("winnerDisplay")
-        }
-
- /* Function for Scoreboard */
-function scoreBoard() {
-
-}       
- }
 
 
