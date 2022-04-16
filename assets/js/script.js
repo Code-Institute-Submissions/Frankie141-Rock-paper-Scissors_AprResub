@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 /**
  * Declare constants for DOM Elements 
  * and possible choices
@@ -47,15 +48,15 @@ function generateComputerChoice() {
     return computerChoice;    
 }
 
-/* Function to get results */
+/* Function to get results and update score board */
  function getResults() {
      console.log("calling getResults function");
 
-     document.getElementById("playerChoice").innerHTML = playerChoiceDisplay
-     document.getElementById("computerChoice").innerHTML = computerChoiceDisplay
+     document.getElementById("playerChoice").innerHTML = playerChoiceDisplay;
+     document.getElementById("computerChoice").innerHTML = computerChoiceDisplay;
 
         if (computerChoiceDisplay === playerChoiceDisplay){
-            document.getElementsByClassName("winner").innerHTML = 'Its a tie'
+            document.getElementsByClassName("winner").innerHTML = 'Its a tie';
         }
 
         if (computerChoiceDisplay === 'rock')
