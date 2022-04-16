@@ -4,8 +4,8 @@
  * and possible choices
  * Setting scores 
  */  
-let computerChoiceDisplay = document.getElementById('computers-choice');
-const playerChoiceDisplay = document.getElementById('players-choice');
+let computerChoiceDisplay = document.getElementById('computerChoice');
+const playerChoiceDisplay = document.getElementById('playerChoice');
 const choiceOptions = document.querySelectorAll('.game-button');
 const playerScore = document.getElementsByClassName('player-score');
 const computerScore = document.getElementsByClassName('computer-score');
@@ -52,7 +52,7 @@ function generateComputerChoice() {
  function getResults() {
      console.log("calling getResults function");
 
-     document.getElementById("playerChoice").innerHTML = playerChoiceDisplay;
+     document.getElementById("playerChoice").value = playerChoiceDisplay;
      document.getElementById("computerChoice").innerHTML = computerChoiceDisplay;
 
         if (computerChoiceDisplay === playerChoiceDisplay){
