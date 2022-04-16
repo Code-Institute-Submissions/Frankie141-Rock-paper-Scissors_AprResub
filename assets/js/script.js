@@ -21,18 +21,12 @@ let computerChoiceNumber;
     document.getElementById("clear").addEventListener("click", clear);        
             console.log("click registered");
             playerChoice = e.target.id;
-            playerChoiceDisplay.innerHTML = playerChoice;
-            console.log(playerChoice);
-            console.log(playerChoiceDisplay);
+            playerChoiceDisplay.innerHTML= playerChoice;
             computerChoice = e.target.id;
             computerChoiceDisplay.innerHTML = computerChoice;
-            console.log(computerChoice);
-            console.log(computerChoiceDisplay);
             generateComputerChoice();
             computerChoiceDisplay.innerHTML = computerChoiceNumber;
-            console.log("computerChoiceDisplay")
             getResults("calling getResults function");
-            scoreBoard();
 })); 
 
 /* Function to generate computers choice*/
@@ -94,6 +88,11 @@ function generateComputerChoice() {
             if  (playerChoiceDisplay === 'rock'){
                 document.getElementsByClassName('winner').innerHTML = 'Player, you are the winner!';
                 playerScore.innerHTML = parseInt(playerScore.innerHTML)+1;   
-        }   
+            }   
+            else {
+            if (computerChoiceDisplay === 'paper')
+                document.getElementsByClassName('winner').innerHTML = 'Computer wins, better luck next time!';
+                computerScore.innerHTML = parseInt(computerScore.innerHTML)+1;    
+            }
 
 
