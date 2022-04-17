@@ -32,49 +32,50 @@
     <!-- Game buttons -->
     <section class="gamebttn">
 
-    <div class="home-page">
-    <h3>Make your Move</h3>
+        <div class="home-page">
+            <h3>Make your Move</h3>
 
-    <div class="game-buttons" id="container">
-        <div class="buttons">
-            <button class="game-button" class="inline-block" id="rock" id="button1">&#9994;</button>
+            <div class="game-buttons" id="container">
+                <div class="buttons">
+                    <button class="game-button" class="inline-block" id="rock" id="button1">&#9994;</button>
+                </div>
+                <div class="buttons">
+                    <button class="game-button" class="inline-block" id="paper" id="button2">&#128195;</button>
+                </div>
+                <div class="buttons">
+                    <button class="game-button" class="inline-block" id="scissors" id="button3">&#9986;</button>
+                </div>
+            </div>
+
+            <div class="clear-button">
+                <button id="clear" type="button">Clear</button>
+            </div>
+
+            <!-- Option selected by player and computer -->
+
+            <div id="choices">
+                <div id="players-choice">
+                    <h4 class="player-choice">Players Choice:</h4>
+                    <p id="playerChoice"></p>
+                </div>
+                <div id="computers-choice">
+                    <h4 class="computer-choice">Computers Choice:</h4>
+                    <p id="computerChoice"></p>
+                </div>
+            </div>
+
+            <!-- Scores and Results -->
+
+            <div class="score-box">
+                <p>Your Score: <span id="player-score">0</span></p>
+                <p>Computer Score: <span id="computer-score">0</span></p>
+                <p>Winner: <span class="winner"></span></p>
+            </div>
         </div>
-        <div class="buttons">
-            <button class="game-button" class="inline-block" id="paper" id="button2">&#128195;</button>
-        </div>
-        <div class="buttons">
-            <button class="game-button" class="inline-block" id="scissors" id="button3">&#9986;</button>
-        </div>
-    </div>
-
-    <div class="clear-button">
-        <button id="clear" type="button">Clear</button>
-    </div>
-
-    <!-- Option selected by player and computer -->
-
-    <div id="choices">
-    <div id="players-choice">
-    <h4 class="player-choice">Players Choice:</h4>
-    <p id="playerChoice"></p>
-    </div>
-    <div id="computers-choice">
-    <h4 class="computer-choice">Computers Choice:</h4>
-    <p id="computerChoice"></p>
-    </div>
-    </div>
-
-    <!-- Scores and Results -->
-
-    <div class="score-box">
-        <p>Your Score: <span id="player-score">0</span></p>
-        <p>Computer Score: <span id="computer-score">0</span></p>
-        <p>Winner: <span class="winner"></span></p>
-    </div>
-    </div>
 
     </section>
 
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
