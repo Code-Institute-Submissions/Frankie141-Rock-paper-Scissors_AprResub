@@ -6,7 +6,7 @@
  */  
 let computerChoiceDisplay = document.getElementById('computerChoice');
 const playerChoiceDisplay = document.getElementById('playerChoice');
-const choiceOptions = document.querySelectorAll('.game-button');
+const choiceOptions = document.querySelectorAll('button');
 const playerScore = document.getElementsByClassName('player-score');
 const computerScore = document.getElementsByClassName('computer-score');
 let playerChoice;
@@ -26,33 +26,32 @@ let cScore = 0;
         computerChoice = e.target.id;
         computerChoiceDisplay.innerHTML = computerChoice;
         generateComputerChoice();
-        computerChoiceDisplay.innerHTML = computerChoiceNumber;
         getResults("calling getResults function");
         updateScore();
-        if (getResults()) {
+        if (getWinner()) {
             pScore = cScore = 0;
             updateScore();
         }
+        getWinner();
 })); 
 
 /* Function to generate computers choice*/
 function generateComputerChoice() {
-    console.log("calling generateComputerChoice function");
-    const randomChoiceNumber = Math.floor(Math.random() * choiceOptions.length);
+    const randomChoiceNumber = Math.floor(Math.random() *choiceOptions.length);
 
     if (randomChoiceNumber === 1) {
-        computerChoiceDisplay = 'rock';
+        computerChoice = 'rock';
         }
     
     if (randomChoiceNumber === 2) {
-        computerChoiceDisplay = 'scissors';
+        computerChoice = 'scissors';
         }
 
     if (randomChoiceNumber === 3) {
-        computerChoiceDisplay = 'paper';
+        computerChoice = 'paper';
         }   
-        
-    return computerChoice;    
+    
+    computerChoiceDisplay.innerHTML = computerChoice;      
 }
 
 /* Function to get results */
@@ -103,6 +102,20 @@ function generateComputerChoice() {
 
 /* Function to update Score board */
 function updateScore() {
+    console.log("updateScore");
         document.getElementById("player-score").value = pScore;
         document.getElementById("computer-score").value = cScore;
+}
+
+function getWinner() {
+    console.log("getWinner");
+        if (pScore === 5 || cScore === 5) {
+            const winner = 
+            pScore === 5
+            ? "You are the Winner! Congratulations!"
+            : "The Computer wins! Better luck next time!";
+        alert(winner);
+        return true;    
+        }
+        return false;
 }
