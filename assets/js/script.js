@@ -23,12 +23,6 @@ choiceOptions.forEach(choiceOptions =>
         computerChoiceDisplay.innerHTML = computerChoice;
         generateComputerChoice();
         getResults("calling getResults function");
-        updateScore();
-        if (getWinner()) {
-            pScore = cScore = 0;
-            updateScore();
-        }
-        getWinner();
     }));
 
 /* Function to generate computers choice*/
@@ -50,65 +44,60 @@ function generateComputerChoice() {
     computerChoiceDisplay.innerHTML = computerChoice;
 }
 
+/* Function to update Score board */
+const updateScore = () =>{
+    const playerScore = document.querySelector('#player-score p');
+    const computerScore = document.querySelector('#computer-score p');
+    playerScore.textContent = pScore;
+    computerScore.textContent = cScore;
+};
+
 /* Function to get results */
 function getResults() {
     document.getElementById("playerChoice").value = playerChoiceDisplay;
     document.getElementById("computerChoice").value = computerChoiceDisplay;
 
     if (computerChoiceDisplay === playerChoiceDisplay) {
-        document.getElementsByClassName("winner").innerHTML = 'Its a tie';
+        document.getElementsByClassName("winner").value = 'Its a tie';
     }
 
     if (computerChoiceDisplay === 'rock')
         if (playerChoiceDisplay === 'paper') {
-            document.getElementsByClassName("winner").innerHTML = 'Player, you are the winner!';
+            document.getElementsByClassName("winner").value = 'Player, you are the winner!';
             pScore++;
+            updateScore();
         }
     else {
         if (computerChoiceDisplay === 'scissors') {
-            document.getElementsByClassName('winner').innerHTML = 'Computer wins, better luck next time!';
+            document.getElementsByClassName('winner').value = 'Computer wins, better luck next time!';
             cScore++;
+            updateScore();
         }
     }
 
     if (computerChoiceDisplay === 'paper')
         if (playerChoiceDisplay === 'scissors') {
-            document.getElementsByClassName('winner').innerHTML = 'Player, you are the winner!';
+            document.getElementsByClassName('winner').value = 'Player, you are the winner!';
             pScore++;
+            updateScore();
         }
     else {
         if (computerChoiceDisplay === 'rock')
-            document.getElementsByClassName('winner').innerHTML = 'Computer wins, better luck next time!';
-        cScore++;
+            document.getElementsByClassName('winner').value = 'Computer wins, better luck next time!';
+            cScore++;
+            updateScore();
     }
 }
 
 if (computerChoiceDisplay === 'scissors')
     if (playerChoiceDisplay === 'rock') {
-        document.getElementsByClassName('winner').innerHTML = 'Player, you are the winner!';
-        pScore++;
+        document.getElementsByClassName('winner').value = 'Player, you are the winner!';
+            pScore++;
+            updateScore();
     }
 else {
     if (computerChoiceDisplay === 'paper')
-        document.getElementsByClassName('winner').innerHTML = 'Computer wins, better luck next time!';
-    cScore++;
-}
-
-/* Function to update Score board */
-function updateScore() {
-    console.log("updateScore");
-    document.getElementById("player-score").textContent = pScore;
-    document.getElementById("computer-score").textContent = cScore;
-}
-
-function getWinner() {
-    if (pScore === 5 || cScore === 5) {
-        const winner =
-            pScore === 5 ?
-            "You are the Winner! Congratulations!" :
-            "The Computer wins! Better luck next time!";
-        alert(winner);
-        return true;
-    }
-    return false;
+        document.getElementsByClassName('winner').value = 'Computer wins, better luck next time!';
+            cScore++;
+            updateScore();
 }
