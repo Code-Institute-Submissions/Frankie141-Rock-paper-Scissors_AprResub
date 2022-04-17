@@ -12,6 +12,8 @@ const computerScore = document.getElementsByClassName('computer-score');
 let playerChoice;
 let computerChoice;
 let computerChoiceNumber;
+let pScore = 0;
+let cScore = 0;
 
 
 /* Function to start game */        
