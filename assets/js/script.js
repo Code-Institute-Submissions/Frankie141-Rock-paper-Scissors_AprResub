@@ -28,6 +28,11 @@ let cScore = 0;
         generateComputerChoice();
         computerChoiceDisplay.innerHTML = computerChoiceNumber;
         getResults("calling getResults function");
+        updateScore();
+        if (getResults()) {
+            pScore = cScore = 0;
+            updateScore();
+        }
 })); 
 
 /* Function to generate computers choice*/
@@ -50,12 +55,12 @@ function generateComputerChoice() {
     return computerChoice;    
 }
 
-/* Function to get results and update score board */
+/* Function to get results */
  function getResults() {
      console.log("calling getResults function");
 
      document.getElementById("playerChoice").value = playerChoiceDisplay;
-     document.getElementById("computerChoice").innerHTML = computerChoiceDisplay;
+     document.getElementById("computerChoice").value = computerChoiceDisplay;
 
         if (computerChoiceDisplay === playerChoiceDisplay){
             document.getElementsByClassName("winner").innerHTML = 'Its a tie';
@@ -96,4 +101,8 @@ function generateComputerChoice() {
                 cScore++; 
             }
 
-
+/* Function to update Score board */
+function updateScore() {
+        document.getElementById("player-score").value = pScore;
+        document.getElementById("computer-score").value = cScore;
+}
