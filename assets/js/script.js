@@ -64,36 +64,36 @@ function generateComputerChoice() {
         if (computerChoiceDisplay === 'rock')
             if  (playerChoiceDisplay === 'paper'){
                 document.getElementsByClassName("winner").innerHTML = 'Player, you are the winner!';
-                playerScore.innerHTML = parseInt(playerScore.innerHTML)+1;   
+                pScore++; 
             }
             else {
             if (computerChoiceDisplay === 'scissors') {
                 document.getElementsByClassName('winner').innerHTML = 'Computer wins, better luck next time!';
-                computerScore.innerHTML = parseInt(computerScore.innerHTML)+1;
+                cScore++;
                 }    
             }
 
         if (computerChoiceDisplay === 'paper') 
             if  (playerChoiceDisplay === 'scissors'){
                 document.getElementsByClassName('winner').innerHTML = 'Player, you are the winner!';
-                playerScore.innerHTML = parseInt(playerScore.innerHTML)+1;
+                pScore++; 
             } 
             else {
             if (computerChoiceDisplay === 'rock')
                 document.getElementsByClassName('winner').innerHTML = 'Computer wins, better luck next time!';
-                computerScore.innerHTML = parseInt(computerScore.innerHTML)+1;
+                cScore++;
                 }
             }
 
         if (computerChoiceDisplay === 'scissors')
             if  (playerChoiceDisplay === 'rock'){
                 document.getElementsByClassName('winner').innerHTML = 'Player, you are the winner!';
-                playerScore.innerHTML = parseInt(playerScore.innerHTML)+1;   
+                pScore++; 
             }   
             else {
             if (computerChoiceDisplay === 'paper')
                 document.getElementsByClassName('winner').innerHTML = 'Computer wins, better luck next time!';
-                computerScore.innerHTML = parseInt(computerScore.innerHTML)+1;    
+                cScore++; 
             }
 
 
