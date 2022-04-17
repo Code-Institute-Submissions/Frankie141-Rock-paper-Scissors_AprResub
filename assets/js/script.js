@@ -7,11 +7,8 @@
 let computerChoiceDisplay = document.getElementById('computerChoice');
 const playerChoiceDisplay = document.getElementById('playerChoice');
 const choiceOptions = document.querySelectorAll('button');
-const playerScore = document.getElementsByClassName('player-score');
-const computerScore = document.getElementsByClassName('computer-score');
 let playerChoice;
 let computerChoice;
-let computerChoiceNumber;
 let pScore = 0;
 let cScore = 0;
 
@@ -103,8 +100,8 @@ function generateComputerChoice() {
 /* Function to update Score board */
 function updateScore() {
     console.log("updateScore");
-        document.getElementById("player-score").value = pScore;
-        document.getElementById("computer-score").value = cScore;
+        document.getElementById("player-score").innerHTML = pScore;
+        document.getElementById("computer-score").innerHTML = cScore;
 }
 
 function getWinner() {
