@@ -7,11 +7,10 @@
 let computerChoiceDisplay = document.getElementById('computerChoice');
 const playerChoiceDisplay = document.getElementById('playerChoice');
 const choiceOptions = document.querySelectorAll('button');
+var computerScore = document.getElementById("computer-Score");
+var playerScore = document.getElementById("player-Score");
 let playerChoice;
 let computerChoice;
-let pScore = 0;
-let cScore = 0;
-
 
 /* Function to start game */
 choiceOptions.forEach(choiceOptions =>
@@ -42,14 +41,6 @@ function generateComputerChoice() {
     }
 
     computerChoiceDisplay.innerHTML = computerChoice;
-}
-
-/* Function to update Score board */
-const updateScore = () =>{
-    const playerScore = document.querySelector('#player-score p');
-    const computerScore = document.querySelector('#computer-score p');
-    playerScore.textContent = pScore;
-    computerScore.textContent = cScore;
 };
 
 /* Function to get results */
@@ -58,54 +49,46 @@ function getResults() {
     document.getElementById("computerChoice").value = computerChoiceDisplay;
 
     if (computerChoiceDisplay === playerChoiceDisplay) {
-        document.getElementsByClassName("winner").value = 'Its a tie';
+        document.getElementsByClassName("winner").innerHTML = 'Its a tie';
     }
 
     if (computerChoiceDisplay === 'rock')
         if (playerChoiceDisplay === 'paper') {
-            document.getElementsByClassName("winner").value = 'Player, you are the winner!';
-            pScore++;
-            updateScore();
+            document.getElementsByClassName("winner").innerHTML = 'Player, you are the winner!';
+            playerScore.innerHTML = parseInt(playerScore.innerHTML)+1;
         }
     else {
         if (computerChoiceDisplay === 'scissors') {
-            document.getElementsByClassName('winner').value = 'Computer wins, better luck next time!';
-            cScore++;
-            updateScore();
+            document.getElementsByClassName('winner').innerHTML = 'Computer wins, better luck next time!';
+            computerScore.innerHTML = parseInt(computerScore.innerHTML)+1;
         }
     }
-
+}    
     if (computerChoiceDisplay === 'paper')
         if (playerChoiceDisplay === 'scissors') {
-            document.getElementsByClassName('winner').value = 'Player, you are the winner!';
-            pScore++;
-            updateScore();
+            document.getElementsByClassName('winner').innerHTML = 'Player, you are the winner!';
+            playerScore.innerHTML = parseInt(playerScore.innerHTML)+1;
         }
     else {
         if (computerChoiceDisplay === 'rock')
-            document.getElementsByClassName('winner').value = 'Computer wins, better luck next time!';
-            cScore++;
-            updateScore();
+            document.getElementsByClassName('winner').innerHTML = 'Computer wins, better luck next time!';
+            computerScore.innerHTML = parseInt(computerScore.innerHTML)+1;
+        }    
+    if (computerChoiceDisplay === 'scissors')
+        if (playerChoiceDisplay === 'rock') {
+            document.getElementsByClassName('winner').innerHTML = 'Player, you are the winner!';
+            playerScore.innerHTML = parseInt(playerScore.innerHTML)+1;
     }
-}
-
-if (computerChoiceDisplay === 'scissors')
-    if (playerChoiceDisplay === 'rock') {
-        document.getElementsByClassName('winner').value = 'Player, you are the winner!';
-            pScore++;
-            updateScore();
-    }
-else {
-    if (computerChoiceDisplay === 'paper')
-        document.getElementsByClassName('winner').value = 'Computer wins, better luck next time!';
-            cScore++;
-            updateScore();
-}
+    else {
+        if (computerChoiceDisplay === 'paper')
+            document.getElementsByClassName('winner').innerHTML = 'Computer wins, better luck next time!'; 
+            computerScore.innerHTML = parseInt(computerScore.innerHTML)+1;
+        };
 
 function clear() {
     document.getElementById('playerChoice').innerHTML = "";
     document.getElementById('computerChoice').innerHTML = "";
-    document.getElementsById('winner').innerHTML = "";
+    document.getElementById('winner').innerHTML = "";
     document.getElementById('player-score').innerHTML = "0";
     document.getElementById('computer-score').innerHTML = "0";
-}
+};
