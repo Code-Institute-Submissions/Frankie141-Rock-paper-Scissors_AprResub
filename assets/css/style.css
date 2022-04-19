@@ -102,17 +102,25 @@ h3 {
     color: black;
     font-weight: bolder;
     font-size: larger;
+    font-family: 'Bebas Neue', Lato;
 }
 
 #player-score {
+    font-family: 'Bebas Neue', Lato;
     text-align: center;
+    font-weight: bolder;
+    font-size: larger;
 }
 
 #computer-score {
+    font-family: 'Bebas Neue', Lato;
     text-align: center;
+    font-weight: bolder;
+    font-size: larger;
 }
 
 #choices {
+    font-family: 'Bebas Neue', Lato;
     display: flex;
     justify-content: center;
     margin-top: 2%;
@@ -121,8 +129,11 @@ h3 {
 }
 
 #winner {
+    font-family: 'Bebas Neue', Lato;
     display: flex;
     justify-content: center;
+    font-weight: bolder;
+    font-size: larger;
 }
 
 /* Instructions Page styling */
