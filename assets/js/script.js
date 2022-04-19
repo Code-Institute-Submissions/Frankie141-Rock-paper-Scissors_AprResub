@@ -105,7 +105,7 @@ else {
 function clear() {
     document.getElementById('playerChoice').innerHTML = "";
     document.getElementById('computerChoice').innerHTML = "";
-    document.getElementsByClassName('winner').innerHTML = "";
+    document.getElementsById('winner').innerHTML = "";
     document.getElementById('player-score').innerHTML = "0";
     document.getElementById('computer-score').innerHTML = "0";
 }
