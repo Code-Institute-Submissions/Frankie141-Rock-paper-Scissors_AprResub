@@ -29,7 +29,8 @@ The Game Options
     * The HTML emojis have been styled so if hovered over the become larger in size and take longer to return to normal size. 
     * A pointer mouse options appears when each emoji is hovered over.  
 
-<img src="assets/images/game-buttons.PNG">
+<img src="assets/images/game.page.PNG">
+<img src="assets/images/Choices.made.PNG">
 
 The Game Results 
 
