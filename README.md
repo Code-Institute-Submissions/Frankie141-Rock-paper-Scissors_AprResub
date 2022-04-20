@@ -2,7 +2,7 @@
 
 Rock Paper and Scissors is a JavaScript based game where the player and the computer each make a choice. The Computer picks completely a random selection and depending on the choice of the player either the computer or player will win. The game will issue a message that states you win or you better luck next time. 
 
-This game site contains two menu options, Game and Instructions. This is simply a fun and quick game targeted at adults or children of all ages.  
+This game site contains two menu options, PlayGame and Instructions. This is simply a fun and quick game targeted at adults or children of all ages.  
 
 <img src="assets/images/Responsiveness.PNG">
 
@@ -42,30 +42,22 @@ The Game Results
 Features Left to Implement
 
     * I would like to implement the lizard, spock options at a later stage. 
-    * I would like to make improvements to the styling of this game at a later stage.
-    * I would like to work on fixing the score board bug.
+    * I would like to work on fixing the score board and winner announcement bug.
 
 Testing 
 
     * I have tested this game in different browsers: Chrome, Edge and Firefox.
 
-    * The header, instructions, game buttons and results are all easy to read and understand. 
+    * The header, instructions, game buttons are all easy to read and understand. 
 
     * This project is responsiveness, colors contrast well on all size screens. 
 
-    * Scoreboard function does not currently work.  
-
-Bugs 
-
-    * When the computer selects its choice the message [objectHTMLspanelement] appears next to Computer choice in results. 
-    * I discovered this was because I was using the wrong computer choice variables in the wrong order. 
-    * Rearranging the code has fixed my code error. 
+    * Scoreboard and winner functions don't currently work correctly.
 
 Unfixed Bugs 
 
-    * Scoreboard doesn't work despite endless tries at fixing this issue. 
-    * CSS grid creating additional columns and rows and displaying elements where they shouldn't be. 
-    * I would like to work fixing both bugs however my time to complete the project has run out.  
+    * Scoreboard and winner option doesn't work despite endless tries at fixing this issue. 
+    * I would like to work fix the scoreboard bug however my time to complete the project has run out.  
 
 Validator Testing 
 
